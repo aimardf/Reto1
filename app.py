@@ -29,7 +29,7 @@ def save_charter(data):
         return False
 
 # Título
-st.title("🚀 Team Charter - Niger 2.0")
+st.title("Team Charter - Niger 2.0")
 
 # Cargar datos
 charter = load_charter()
@@ -40,28 +40,28 @@ if not charter:
 page = st.sidebar.selectbox("Menú", ["Ver Carta", "Firmar", "Administrar Firmas"])
 
 if page == "Ver Carta":
-    st.header("📜 Carta del Equipo")
+    st.header("Carta del Equipo")
     
-    st.subheader(f"🎯 {charter['team_name']}")
+    st.subheader(f"{charter['team_name']}")
     
     st.write("**👥 Miembros:**")
     for member in charter['members']:
         st.write(f"• {member['name']} ({member['email']})")
     
-    st.write("**🎯 Misión:**")
+    st.write("**Misión:**")
     for item in charter['mission']:
         st.write(f"• {item}")
     
-    st.write("**📋 Objetivos:**")
+    st.write("**Objetivos:**")
     for item in charter['objectives']:
         st.write(f"• {item}")
     
-    st.write("**💎 Valores:**")
+    st.write("**Valores:**")
     for item in charter['values']:
         st.write(f"• {item}")
 
 elif page == "Firmar":
-    st.header("✍️ Firmar Carta")
+    st.header("Firmar Carta")
     
     # Mostrar quién ya firmó
     signatures = charter.get('signatures', [])
@@ -117,7 +117,7 @@ elif page == "Firmar":
                         st.error("Error guardando firma")
 
 elif page == "Administrar Firmas":
-    st.header("👨‍💼 Panel del Responsable del Proyecto")
+    st.header(" Panel del Responsable del Proyecto")
     
     members = charter.get('members', [])
     signatures = charter.get('signatures', [])
@@ -139,7 +139,7 @@ elif page == "Administrar Firmas":
         st.write(f"**Progreso:** {len(signatures)}/{len(members)} ({progreso*100:.0f}%)")
     
     # Lista completa de estado
-    st.subheader("📋 Estado Completo de Firmas")
+    st.subheader(" Estado Completo de Firmas")
     
     for member in members:
         # Buscar si firmó
@@ -160,7 +160,7 @@ elif page == "Administrar Firmas":
     
     # Detalles de firmas registradas
     if signatures:
-        st.subheader("📋 Registro Detallado de Firmas")
+        st.subheader("Registro Detallado de Firmas")
         st.write("*Información completa para auditoría:*")
         
         for i, sig in enumerate(signatures, 1):
