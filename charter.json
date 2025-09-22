@@ -1,26 +1,68 @@
 {
   "team_name": "Niger 2.0",
   "members": [
-    {"name": "Luka Isasa", "email": "isasanovic4@gmail.com"},
-    {"name": "Aimar Duarte", "email": "aimardfcole@gmail.com"},
-    {"name": "Enrique Morales", "email": "emoralescebanc@gmail.com"},
-    {"name": "Aimar Redondo", "email": "aredondocebanc@gmail.com"},
-    {"name": "Oihan Cabada", "email": "oihan.cebanc1@gmail.com"}
+    {
+      "name": "Luka Isasa",
+      "email": "isasanovic4@gmail.com",
+      "role": "Desarrollador"
+    },
+    {
+      "name": "Aimar Duarte",
+      "email": "aimardfcole@gmail.com",
+      "role": "Desarrollador"
+    },
+    {
+      "name": "Enrique Morales",
+      "email": "emoralescebanc@gmail.com",
+      "role": "Desarrollador"
+    },
+    {
+      "name": "Aimar Redondo",
+      "email": "aredondocebanc@gmail.com",
+      "role": "Desarrollador"
+    },
+    {
+      "name": "Oihan Cabada",
+      "email": "oihan.cebanc1@gmail.com",
+      "role": "Desarrollador"
+    }
   ],
   "mission": [
     "Realizar el reto con el objetivo de superarlo y a poder ser, realizarlo para conseguir una mejora para el medio ambiente.",
     "Acorde con la agenda 2030."
+  ],
+  "objectives": [
+    "Completar el proyecto dentro del plazo establecido",
+    "Aplicar los conocimientos adquiridos en clase",
+    "Trabajar en equipo de manera efectiva",
+    "Crear un sistema funcional y bien documentado"
   ],
   "values": [
     "Realizar el trabajo asignado.",
     "Implementar en el reto lo aprendido en clase.",
     "Realizar las entregas a tiempo."
   ],
+  "norms": [
+    "Todos los miembros deben participar activamente",
+    "Comunicación clara y respetuosa entre miembros",
+    "Cumplir con los plazos acordados",
+    "Documentar el código adecuadamente",
+    "Uso responsable de herramientas de IA"
+  ],
   "strengths": [
     "Llevamos un año usando git y algunos entornos de programación.",
-    "Tenemos conocimientos básicos de programación y no conocemos entre los miembros del equipo."
+    "Tenemos conocimientos básicos de programación y nos conocemos entre los miembros del equipo."
   ],
   "weaknesses": [
     "No somos expertos en ningún campo y somos relativamente nuevos en la mayoría de aspectos de la programación."
-]
+  ],
+  "signatures": [
+    {
+      "name": "Aimar Duarte",
+      "email": "aimardfcole@gmail.com",
+      "agreement": true,
+      "timestamp": "2025-09-22T12:01:54.219973",
+      "date": "22/09/2025 12:01:54"
+    }
+  ]
 }
