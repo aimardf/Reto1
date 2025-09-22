@@ -80,12 +80,19 @@ def add_signature(charter_data, name, email, agreement):
         st.error(f"Error al guardar la firma: {str(e)}")
         return False
 
-# Título principal
 st.markdown("""
 <h1 style='text-align: center; color: #1f77b4;'>
-    🚀 Team Charter - Niger 2.0
+     Team Charter - Niger 2.0
 </h1>
 <hr style='margin-bottom: 2rem;'>
+""", unsafe_allow_html=True)
+
+# Imagen debajo del título
+st.markdown("""
+<div style="text-align: center; margin-bottom: 2rem;">
+    <img src= https://upload.wikimedia.org/wikipedia/commons/f/f4/Flag_of_Niger.svg
+         alt="Team Charter" style="width: 15%; height: auto;">
+</div>
 """, unsafe_allow_html=True)
 
 # Cargar datos de la carta
