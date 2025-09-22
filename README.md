@@ -2,7 +2,7 @@
 
 ## 📋 Descripción del Proyecto
 
-Este sistema permite al equipo **Niger 2.0** gestionar su carta del equipo (Team Charter) de manera digital mediante una aplicación web desarrollada con **Streamlit**. Los integrantes pueden visualizar la carta completa y firmar digitalmente para aceptar los términos establecidos.
+Este sistema permite al equipo **Niger 2.0** gestionar su carta del equipo (Team Charter) de manera digital mediante una aplicación web desarrollada con **Streamlit**. Los integrantes pueden visualizar la carta completa, firmar digitalmente para aceptar los términos, y los responsables pueden monitorear el progreso.
 
 ## 👥 Equipo Niger 2.0
 
@@ -18,30 +18,30 @@ Este sistema permite al equipo **Niger 2.0** gestionar su carta del equipo (Team
 2. **Visualización web** - Mostrar la carta en una interfaz web intuitiva y profesional
 3. **Firma digital** - Permitir que cada integrante firme digitalmente la carta
 4. **Persistencia integrada** - Guardar firmas directamente en `charter.json`
-5. **Interfaz moderna** - Proporcionar una experiencia de usuario clara y atractiva
+5. **Panel de administración** - Permitir al responsable monitorear el progreso de firmas
 
 ## 🚀 Funcionalidades
 
 ### ✨ Aplicación Web (Streamlit)
-- **🏠 Página de Inicio** - Resumen del equipo y estado general de firmas
-- **📜 Ver Carta del Equipo** - Visualización completa y organizada de toda la carta
-- **✍️ Firmar Carta** - Sistema de firma digital intuitivo y seguro
-- **📊 Estado de Firmas** - Dashboard con progreso y estadísticas detalladas
+- **📜 Ver Carta** - Visualización completa y organizada de toda la carta del equipo
+- **✍️ Firmar Carta** - Sistema de firma digital intuitivo y seguro para miembros
+- **�‍💼 Administrar Firmas** - Panel del responsable para monitorear progreso y exportar datos
 
 ### 🔧 Características Técnicas
-- **Interfaz responsive** - Compatible con dispositivos móviles y desktop
+- **Interfaz simple** - Solo 3 páginas principales, fácil de navegar
 - **Validación de firmas** - Previene firmas duplicadas
 - **Persistencia en tiempo real** - Los datos se guardan inmediatamente
-- **Feedback visual** - Confirmaciones, alertas y notificaciones claras
+- **Exportación CSV** - Para análisis y auditoría externa
+- **Feedback visual** - Confirmaciones, alertas y métricas claras
 
 ## 📁 Estructura de Archivos
 
 ```
 Reto1/
 ├── charter.json         # Carta del equipo con firmas integradas
-├── app.py              # Aplicación principal Streamlit
+├── app.py              # Aplicación principal Streamlit (simple)
 ├── README.md           # Documentación del proyecto
-└── requirements.txt    # Dependencias del proyecto
+└── requirements.txt    # Dependencias mínimas
 ```
 
 ## 📊 Formato de Datos
@@ -64,8 +64,7 @@ Reto1/
       "name": "Nombre del miembro",
       "email": "email@domain.com",
       "agreement": true,
-      "timestamp": "2025-09-22T10:30:00.000Z",
-      "date": "22/09/2025 10:30:00"
+      "date": "22/09/2025 10:30"
     }
   ]
 }
@@ -111,121 +110,86 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 
 ### 📱 Páginas Disponibles
 
-#### 🏠 Inicio
-- **Información general** del equipo y proyecto
-- **Resumen de la misión** del equipo
-- **Lista de miembros** con sus roles
-- **Indicador de progreso** de firmas
-
-#### 📜 Ver Carta del Equipo
+#### 📜 Ver Carta
 - **Información completa** del equipo Niger 2.0
 - **Misión y objetivos** detallados
 - **Valores y normas** del equipo
-- **Fortalezas y áreas de mejora** identificadas
-- **Lista completa** de miembros con roles
+- **Lista de miembros** con emails
 
 #### ✍️ Firmar Carta
-- **Formulario de firma** intuitivo
-- **Selección de miembro** desde lista desplegable
-- **Visualización del email** automática
-- **Resumen de la carta** antes de firmar
-- **Confirmación de términos** mediante checkbox
+- **Lista de firmantes** actuales
+- **Formulario simple** de firma
+- **Selección por nombre** desde lista desplegable
+- **Checkbox de aceptación** obligatorio
 - **Validación** contra firmas duplicadas
-- **Confirmación visual** al completar la firma
+- **Confirmación visual** con animación de globos
 
-#### 📊 Estado de Firmas
-- **Métricas generales** (total miembros, firmados, pendientes, % completado)
+#### �‍💼 Administrar Firmas (Panel del Responsable)
+- **Métricas en tiempo real** (total, firmados, pendientes, % progreso)
 - **Barra de progreso** visual
-- **Estado detallado** de cada miembro
-- **Tabla completa** con fechas de firma
-- **Detalles expandibles** de cada firma registrada
+- **Estado detallado** de cada miembro (firmado/pendiente)
+- **Registro completo** de firmas con fechas y horas
+- **Exportación a CSV** para auditoría externa
+
+## 📈 Historias de Usuario Implementadas
+
+### Historia de Usuario 1 - Miembro del Equipo
+**COMO** miembro del equipo,  
+**QUIERO** leer la carta del equipo y firmarla digitalmente,  
+**PARA** confirmar que acepto los términos y comprometerme con el proyecto.
+
+✅ **Criterios cumplidos:**
+- El miembro puede leer toda la carta antes de firmar
+- Formulario simple con nombre y checkbox de aceptación
+- Solo se permite una firma por miembro
+- Confirmación visual al completar la firma
+
+### Historia de Usuario 2 - Responsable del Proyecto
+**COMO** responsable del proyecto,  
+**QUIERO** que la aplicación guarde y muestre todas las firmas de los miembros,  
+**PARA** poder comprobar quién ha aceptado la carta y quién no.
+
+✅ **Criterios cumplidos:**
+- Panel específico para ver lista completa de firmas
+- Identificación clara de quién firmó y cuándo
+- Información guardada en charter.json (JSON)
+- Solo se aceptan firmas válidas con nombre y aceptación marcada
+- Exportación CSV para análisis externo
 
 ## 🎨 Experiencia de Usuario
 
-### Diseño Visual
-- **Colores corporativos** azules y profesionales
+### Diseño Simple y Funcional
+- **3 páginas principales** claramente diferenciadas
+- **Navegación lateral** intuitiva
 - **Iconos descriptivos** para mejor comprensión
-- **Layout responsive** que se adapta a cualquier pantalla
-- **Tipografía clara** y fácil de leer
+- **Colores consistentes** azules y verdes para éxito
 
-### Interactividad
-- **Navegación mediante sidebar** clara y organizada
-- **Formularios intuitivos** con validación en tiempo real
-- **Feedback inmediato** con mensajes de éxito, error y advertencia
-- **Animaciones celebratorias** al completar firmas (globos)
-- **Tablas interactivas** con ordenación y filtrado
-
-### Usabilidad
-- **Flujo lógico** desde información hasta firma
-- **Prevención de errores** con validaciones apropiadas
-- **Mensajes claros** en español para toda la audiencia
-- **Confirmaciones** antes de acciones importantes
-
-## 📈 Casos de Uso
-
-### 1. Miembro Nuevo Firma la Carta
-1. Acceder a la aplicación web
-2. Navegar a "📜 Ver Carta del Equipo" para leer toda la información
-3. Ir a "✍️ Firmar Carta"
-4. Seleccionar su nombre de la lista
-5. Leer el resumen de la carta en el expandidor
-6. Marcar el checkbox de aceptación
-7. Hacer clic en "Firmar Carta del Equipo"
-8. Recibir confirmación visual con animación
-
-### 2. Seguimiento del Progreso del Equipo
-1. Acceder a "🏠 Inicio" para ver resumen general
-2. Revisar la barra de progreso de firmas
-3. Ir a "📊 Estado de Firmas" para detalles completos
-4. Verificar qué miembros han firmado y cuáles están pendientes
-5. Revisar fechas y detalles de firmas individuales
-
-### 3. Consulta de Información del Equipo
-1. Usar "📜 Ver Carta del Equipo" para ver toda la información
-2. Revisar misión, objetivos, valores y normas
-3. Consultar fortalezas y áreas de mejora
-4. Verificar lista completa de miembros y roles
-
-## 🔧 Características Técnicas Avanzadas
-
-### Validaciones Implementadas
-- **Prevención de firmas duplicadas** - El sistema verifica emails únicos
-- **Validación de selección** - Obliga a seleccionar un miembro válido
-- **Confirmación de términos** - Requiere aceptación explícita antes de firmar
-- **Manejo de errores** - Gestión graceful de problemas de archivos o datos
-
-### Persistencia de Datos
-- **Archivo único** - Toda la información en `charter.json`
-- **Timestamps precisos** - Registro de fecha y hora exacta de cada firma
-- **Formato legible** - JSON con indentación y codificación UTF-8
-- **Respaldo automático** - Los datos se guardan inmediatamente tras cada cambio
-
-### Rendimiento y Escalabilidad
-- **Carga eficiente** - Lectura optimizada de archivos JSON
-- **Interfaz responsiva** - Actualización automática tras cambios
-- **Compatibilidad** - Funciona en navegadores modernos
-- **Ligereza** - Dependencias mínimas para máximo rendimiento
+### Flujo de Trabajo
+1. **Miembro** accede a "Ver Carta" para leer toda la información
+2. **Miembro** va a "Firmar Carta" y completa el formulario
+3. **Responsable** revisa progreso en "Administrar Firmas"
+4. **Responsable** exporta datos cuando sea necesario
 
 ## 📋 Requisitos Cumplidos
 
 ✅ **Guardar carta del equipo** - `charter.json` con misión, objetivos, roles y normas  
-✅ **Mostrar en web** - Interfaz web completa y profesional con Streamlit  
-✅ **Firma digital** - Sistema completo de firmas con validación integrada  
+✅ **Mostrar en web** - Interfaz web simple y funcional con Streamlit  
+✅ **Firma digital** - Sistema completo de firmas con validación  
 ✅ **Almacenamiento de firmas** - Firmas guardadas directamente en `charter.json`  
-✅ **Interfaz para datos** - Web intuitiva para visualizar y gestionar la carta  
-✅ **Proyecto funcional** - Sistema completo y robusto, no prototipo  
-✅ **Código ordenado** - Estructura clara, comentarios y documentación completa  
-✅ **Participación activa** - Cada miembro puede contribuir a diferentes componentes  
+✅ **Interfaz para datos** - Web intuitiva para visualizar y gestionar  
+✅ **Panel de administración** - Vista especial para responsables del proyecto  
+✅ **Exportación de datos** - CSV para auditoría y análisis externo  
+✅ **Código simple** - Solo 150 líneas de código, fácil de mantener  
 ✅ **GitHub** - Repositorio compartido con historial de commits  
 
 ## 🌟 Características Destacadas
 
-- **Diseño profesional** - Interfaz moderna y atractiva
-- **Experiencia intuitiva** - Flujo de usuario lógico y fácil de seguir
-- **Feedback visual completo** - Mensajes claros y animaciones celebratorias
-- **Datos unificados** - Todo en un solo archivo JSON para simplicidad
-- **Responsive design** - Compatible con móviles, tablets y desktop
-- **Multiidioma** - Preparado para español con codificación UTF-8
+- **Arquitectura simple** - Un solo archivo Python con lógica clara
+- **Sin dependencias complejas** - Solo Streamlit como framework
+- **Datos centralizados** - Todo en charter.json para máxima simplicidad
+- **Interfaz responsiva** - Funciona en cualquier dispositivo
+- **Validaciones robustas** - Previene errores y duplicados
+- **Feedback inmediato** - Mensajes claros y animaciones
 
 ## 📞 Soporte y Contacto
 
