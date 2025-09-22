@@ -44,7 +44,7 @@ if page == "Ver Carta":
     
     st.subheader(f"{charter['team_name']}")
     
-    st.write("**👥 Miembros:**")
+    st.write("**Miembros:**")
     for member in charter['members']:
         st.write(f"• {member['name']} ({member['email']})")
     
@@ -117,7 +117,11 @@ elif page == "Firmar":
                         st.error("Error guardando firma")
 
 elif page == "Administrar Firmas":
+<<<<<<< HEAD
     st.header(" Panel del Responsable del Proyecto")
+=======
+    st.header("Panel del Responsable del Proyecto")
+>>>>>>> afab913f983c2ec02ad2f6428722c429bcd293a9
     
     members = charter.get('members', [])
     signatures = charter.get('signatures', [])
