@@ -1,10 +1,10 @@
 # Team Charter Management System - Niger 2.0
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
-Este sistema permite al equipo **Niger 2.0** gestionar su carta del equipo (Team Charter) de manera digital mediante una aplicación web desarrollada con **Streamlit**. Los integrantes pueden visualizar la carta completa, firmar digitalmente para aceptar los términos, y los responsables pueden monitorear el progreso.
+Este sistema permite a nuestro equipo **Niger 2.0** gestionar la carta del equipo (Team Charter) de manera digital mediante una aplicación web desarrollada con **Streamlit**. Los integrantes del grupo pueden visualizar la carta completa, firmar digitalmente para aceptar los términos, y los responsables pueden monitorear el progreso.
 
-## 👥 Equipo Niger 2.0
+## Equipo Niger 2.0
 
 - **Luka Isasa** (isasanovic4@gmail.com) - Desarrollador
 - **Aimar Duarte** (aimardfcole@gmail.com) - Desarrollador  
@@ -12,29 +12,29 @@ Este sistema permite al equipo **Niger 2.0** gestionar su carta del equipo (Team
 - **Aimar Redondo** (aredondocebanc@gmail.com) - Desarrollador
 - **Oihan Cabada** (oihan.cebanc1@gmail.com) - Desarrollador
 
-## 🎯 Objetivos del Sistema
+## Objetivos del Sistema
 
 1. **Gestionar la carta del equipo** - Almacenar misión, objetivos, roles y normas en `charter.json`
-2. **Visualización web** - Mostrar la carta en una interfaz web intuitiva y profesional
+2. **Visualización web** - Mostrar la carta en una interfaz web facil y profesional
 3. **Firma digital** - Permitir que cada integrante firme digitalmente la carta
 4. **Persistencia integrada** - Guardar firmas directamente en `charter.json`
 5. **Panel de administración** - Permitir al responsable monitorear el progreso de firmas
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
-### ✨ Aplicación Web (Streamlit)
-- **📜 Ver Carta** - Visualización completa y organizada de toda la carta del equipo
-- **✍️ Firmar Carta** - Sistema de firma digital intuitivo y seguro para miembros
-- **�‍💼 Administrar Firmas** - Panel del responsable para monitorear progreso y exportar datos
+### Aplicación Web (Streamlit)
+- ** Ver Carta** - Visualización completa y organizada de toda la carta del equipo
+- ** Firmar Carta** - Sistema de firma digital intuitivo y seguro para miembros
+- ** Administrar Firmas** - Panel del responsable para monitorear progreso y exportar datos
 
 ### 🔧 Características Técnicas
-- **Interfaz simple** - Solo 3 páginas principales, fácil de navegar
+- **Interfaz simple** - Una pagina principal y un selector para cambiar de pagina
 - **Validación de firmas** - Previene firmas duplicadas
 - **Persistencia en tiempo real** - Los datos se guardan inmediatamente
 - **Exportación CSV** - Para análisis y auditoría externa
 - **Feedback visual** - Confirmaciones, alertas y métricas claras
 
-## 📁 Estructura de Archivos
+##  Estructura de Archivos
 
 ```
 Reto1/
@@ -44,7 +44,7 @@ Reto1/
 └── requirements.txt    # Dependencias mínimas
 ```
 
-## 📊 Formato de Datos
+## Formato de Datos
 
 ### charter.json (Estructura completa)
 ```json
@@ -70,7 +70,7 @@ Reto1/
 }
 ```
 
-## 🛠️ Instalación y Configuración
+## Instalación y Configuración
 
 ### Prerrequisitos
 - Python 3.8 o superior
@@ -98,7 +98,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 🚀 Uso del Sistema
+## Uso del Sistema
 
 ### Iniciar la Aplicación Web
 
@@ -108,15 +108,15 @@ streamlit run app.py
 
 La aplicación se abrirá automáticamente en tu navegador en `http://localhost:8501`
 
-### 📱 Páginas Disponibles
+### Páginas Disponibles
 
-#### 📜 Ver Carta
+#### Ver Carta
 - **Información completa** del equipo Niger 2.0
 - **Misión y objetivos** detallados
 - **Valores y normas** del equipo
 - **Lista de miembros** con emails
 
-#### ✍️ Firmar Carta
+#### Firmar Carta
 - **Lista de firmantes** actuales
 - **Formulario simple** de firma
 - **Selección por nombre** desde lista desplegable
@@ -124,21 +124,21 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 - **Validación** contra firmas duplicadas
 - **Confirmación visual** con animación de globos
 
-#### �‍💼 Administrar Firmas (Panel del Responsable)
+#### Administrar Firmas (Panel del Responsable)
 - **Métricas en tiempo real** (total, firmados, pendientes, % progreso)
 - **Barra de progreso** visual
 - **Estado detallado** de cada miembro (firmado/pendiente)
 - **Registro completo** de firmas con fechas y horas
 - **Exportación a CSV** para auditoría externa
 
-## 📈 Historias de Usuario Implementadas
+## Historias de Usuario Implementadas
 
 ### Historia de Usuario 1 - Miembro del Equipo
 **COMO** miembro del equipo,  
 **QUIERO** leer la carta del equipo y firmarla digitalmente,  
 **PARA** confirmar que acepto los términos y comprometerme con el proyecto.
 
-✅ **Criterios cumplidos:**
+**Criterios cumplidos:**
 - El miembro puede leer toda la carta antes de firmar
 - Formulario simple con nombre y checkbox de aceptación
 - Solo se permite una firma por miembro
@@ -149,14 +149,14 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 **QUIERO** que la aplicación guarde y muestre todas las firmas de los miembros,  
 **PARA** poder comprobar quién ha aceptado la carta y quién no.
 
-✅ **Criterios cumplidos:**
+**Criterios cumplidos:**
 - Panel específico para ver lista completa de firmas
 - Identificación clara de quién firmó y cuándo
 - Información guardada en charter.json (JSON)
 - Solo se aceptan firmas válidas con nombre y aceptación marcada
 - Exportación CSV para análisis externo
 
-## 🎨 Experiencia de Usuario
+## Experiencia de Usuario
 
 ### Diseño Simple y Funcional
 - **3 páginas principales** claramente diferenciadas
@@ -170,19 +170,19 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 3. **Responsable** revisa progreso en "Administrar Firmas"
 4. **Responsable** exporta datos cuando sea necesario
 
-## 📋 Requisitos Cumplidos
+## Requisitos Cumplidos
 
-✅ **Guardar carta del equipo** - `charter.json` con misión, objetivos, roles y normas  
-✅ **Mostrar en web** - Interfaz web simple y funcional con Streamlit  
-✅ **Firma digital** - Sistema completo de firmas con validación  
-✅ **Almacenamiento de firmas** - Firmas guardadas directamente en `charter.json`  
-✅ **Interfaz para datos** - Web intuitiva para visualizar y gestionar  
-✅ **Panel de administración** - Vista especial para responsables del proyecto  
-✅ **Exportación de datos** - CSV para auditoría y análisis externo  
-✅ **Código simple** - Solo 150 líneas de código, fácil de mantener  
-✅ **GitHub** - Repositorio compartido con historial de commits  
+ **Guardar carta del equipo** - `charter.json` con misión, objetivos, roles y normas  
+ **Mostrar en web** - Interfaz web simple y funcional con Streamlit  
+ **Firma digital** - Sistema completo de firmas con validación  
+ **Almacenamiento de firmas** - Firmas guardadas directamente en `charter.json`  
+ **Interfaz para datos** - Web intuitiva para visualizar y gestionar  
+ **Panel de administración** - Vista especial para responsables del proyecto  
+ **Exportación de datos** - CSV para auditoría y análisis externo  
+ **Código simple** - Solo 150 líneas de código, fácil de mantener  
+ **GitHub** - Repositorio compartido con historial de commits  
 
-## 🌟 Características Destacadas
+##  Características Destacadas
 
 - **Arquitectura simple** - Un solo archivo Python con lógica clara
 - **Sin dependencias complejas** - Solo Streamlit como framework
@@ -191,7 +191,7 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 - **Validaciones robustas** - Previene errores y duplicados
 - **Feedback inmediato** - Mensajes claros y animaciones
 
-## 📞 Soporte y Contacto
+##  Soporte y Contacto
 
 Para dudas, sugerencias o reportar problemas:
 - **GitHub Issues**: [Crear issue en el repositorio](https://github.com/aimardf/Reto1/issues)
@@ -202,7 +202,7 @@ Para dudas, sugerencias o reportar problemas:
 **Equipo Niger 2.0** - Proyecto desarrollado para el Reto 1  
 *Comprometidos con la excelencia y el trabajo en equipo* 🚀
 
-## 🔧 Características Técnicas
+##  Características Técnicas
 
 ### Validaciones Implementadas
 - **Verificación de archivos** - Manejo de errores si no existen los archivos JSON
@@ -222,7 +222,7 @@ Para dudas, sugerencias o reportar problemas:
 - **Backup automático** - Los datos se guardan inmediatamente tras cambios
 - **Timestamps** - Registro de fecha y hora en todas las firmas
 
-## 🎨 Diseño y Experiencia de Usuario
+##  Diseño y Experiencia de Usuario
 
 ### Interfaz Web
 - **Diseño responsive** - Funciona en desktop, tablet y móvil
@@ -237,7 +237,7 @@ Para dudas, sugerencias o reportar problemas:
 - **Navegación simple** - Proceso paso a paso para todas las funciones
 - **Emojis descriptivos** - Mejora la experiencia visual en terminal
 
-## 📈 Casos de Uso
+##  Casos de Uso
 
 ### 1. Nuevo Miembro del Equipo
 1. Ejecutar la aplicación web o consola
@@ -263,7 +263,7 @@ Para dudas, sugerencias o reportar problemas:
 3. Revisar logs de actividad por timestamps
 4. Mantener histórico de cambios
 
-## 🤝 Contribución y Desarrollo
+##  Contribución y Desarrollo
 
 ### Estructura del Código
 - **Separación de responsabilidades** - Clases específicas para cada funcionalidad
@@ -284,26 +284,26 @@ Para dudas, sugerencias o reportar problemas:
 - **Docstrings** - Documentación en español para todas las funciones
 - **Comentarios claros** - Explicaciones en puntos complejos
 
-## 🔒 Consideraciones de Seguridad
+##  Consideraciones de Seguridad
 
 - **Validación de entrada** - Filtrado de datos de usuario
 - **Manejo seguro de archivos** - Prevención de inyecciones de path
 - **Codificación UTF-8** - Manejo correcto de caracteres especiales
 - **Sin datos sensibles** - No se almacenan contraseñas o información privada
 
-## 📋 Requisitos Cumplidos
+##  Requisitos Cumplidos
 
-✅ **Guardar carta del equipo** - charter.json con misión, objetivos, roles y normas  
-✅ **Mostrar en consola y web** - Dos interfaces completamente funcionales  
-✅ **Firma digital** - Sistema completo de firmas con validación  
-✅ **Almacenamiento de firmas** - signatures.json con formato estructurado  
-✅ **Interfaz para datos** - Web y consola para introducir y gestionar datos  
-✅ **Proyecto funcional** - Sistema completo, no prototipo  
-✅ **Código ordenado** - Estructura clara y bien documentada  
-✅ **Participación activa** - Cada miembro puede contribuir a diferentes partes  
-✅ **GitHub** - Repositorio compartido con historial de commits  
+ **Guardar carta del equipo** - charter.json con misión, objetivos, roles y normas  
+ **Mostrar en consola y web** - Dos interfaces completamente funcionales  
+ **Firma digital** - Sistema completo de firmas con validación  
+ **Almacenamiento de firmas** - signatures.json con formato estructurado  
+ **Interfaz para datos** - Web y consola para introducir y gestionar datos  
+ **Proyecto funcional** - Sistema completo, no prototipo  
+ **Código ordenado** - Estructura clara y bien documentada  
+ **Participación activa** - Cada miembro puede contribuir a diferentes partes  
+ **GitHub** - Repositorio compartido con historial de commits  
 
-## 🌟 Características Adicionales
+##  Características Adicionales
 
 - **Exportación CSV** - Para análisis externo de firmas
 - **Estadísticas en tiempo real** - Dashboard con métricas del equipo
@@ -311,7 +311,7 @@ Para dudas, sugerencias o reportar problemas:
 - **Manejo de errores robusto** - Recuperación graceful ante fallos
 - **Documentación completa** - README detallado y código documentado
 
-## 📞 Soporte y Contacto
+##  Soporte y Contacto
 
 Para dudas, sugerencias o reportar problemas:
 - **GitHub Issues**: [Crear issue en el repositorio](https://github.com/aimardf/Reto1/issues)
@@ -320,4 +320,4 @@ Para dudas, sugerencias o reportar problemas:
 ---
 
 **Equipo Niger 2.0** - Proyecto desarrollado para el Reto 1  
-*Comprometidos con la excelencia y el trabajo en equipo* 🚀
+*Comprometidos con la excelencia y el trabajo en equipo* 
