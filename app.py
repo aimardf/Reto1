@@ -29,7 +29,14 @@ def save_charter(data):
         return False
 
 # Título
-st.title("🚀 Team Charter - Niger 2.0")
+st.title("Team Charter - Niger 2.0")
+
+st.markdown("""
+<div style="text-align: center; margin-bottom: 2rem;">
+    <img src=https://upload.wikimedia.org/wikipedia/commons/f/f4/Flag_of_Niger.svg 
+         alt="Team Charter" style="width: 20%; height: auto;">
+</div>
+""", unsafe_allow_html=True)
 
 # Cargar datos
 charter = load_charter()
