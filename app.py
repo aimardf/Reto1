@@ -117,7 +117,11 @@ elif page == "Firmar":
                         st.error("Error guardando firma")
 
 elif page == "Administrar Firmas":
+<<<<<<< HEAD
+    st.header(" Panel del Responsable del Proyecto")
+=======
     st.header("Panel del Responsable del Proyecto")
+>>>>>>> afab913f983c2ec02ad2f6428722c429bcd293a9
     
     members = charter.get('members', [])
     signatures = charter.get('signatures', [])
@@ -139,7 +143,7 @@ elif page == "Administrar Firmas":
         st.write(f"**Progreso:** {len(signatures)}/{len(members)} ({progreso*100:.0f}%)")
     
     # Lista completa de estado
-    st.subheader("📋 Estado Completo de Firmas")
+    st.subheader(" Estado Completo de Firmas")
     
     for member in members:
         # Buscar si firmó

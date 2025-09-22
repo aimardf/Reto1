@@ -14,24 +14,35 @@ Este sistema permite a nuestro equipo **Niger 2.0** gestionar la carta del equip
 
 ## Objetivos del Sistema
 
+<<<<<<< HEAD
+1. **Gestionar la carta del equipo** - Almacenar misión, objetivos y valores en `charter.json`
+2. **Visualización web** - Mostrar la carta en una interfaz web intuitiva y profesional
+=======
 1. **Gestionar la carta del equipo** - Almacenar misión, objetivos, roles y normas en `charter.json`
 2. **Visualización web** - Mostrar la carta en una interfaz web facil y profesional
+>>>>>>> afab913f983c2ec02ad2f6428722c429bcd293a9
 3. **Firma digital** - Permitir que cada integrante firme digitalmente la carta
 4. **Persistencia integrada** - Guardar firmas directamente en `charter.json`
 5. **Panel de administración** - Permitir al responsable monitorear el progreso de firmas
 
 ## Funcionalidades
 
+<<<<<<< HEAD
+### ✨ Aplicación Web (Streamlit)
+- **📜 Ver Carta** - Visualización completa y organizada de toda la carta del equipo
+- **✍️ Firmar Carta** - Sistema de firma digital intuitivo y seguro para miembros
+- **👨‍💼 Administrar Firmas** - Panel del responsable para monitorear progreso de firmas
+=======
 ### Aplicación Web (Streamlit)
 - ** Ver Carta** - Visualización completa y organizada de toda la carta del equipo
 - ** Firmar Carta** - Sistema de firma digital intuitivo y seguro para miembros
 - ** Administrar Firmas** - Panel del responsable para monitorear progreso y exportar datos
+>>>>>>> afab913f983c2ec02ad2f6428722c429bcd293a9
 
 ### 🔧 Características Técnicas
 - **Interfaz simple** - Una pagina principal y un selector para cambiar de pagina
 - **Validación de firmas** - Previene firmas duplicadas
 - **Persistencia en tiempo real** - Los datos se guardan inmediatamente
-- **Exportación CSV** - Para análisis y auditoría externa
 - **Feedback visual** - Confirmaciones, alertas y métricas claras
 
 ##  Estructura de Archivos
@@ -56,9 +67,6 @@ Reto1/
   "mission": ["Punto 1 de la misión", "Punto 2 de la misión"],
   "objectives": ["Objetivo 1", "Objetivo 2"],
   "values": ["Valor 1", "Valor 2"],
-  "norms": ["Norma 1", "Norma 2"],
-  "strengths": ["Fortaleza 1", "Fortaleza 2"],
-  "weaknesses": ["Debilidad 1", "Debilidad 2"],
   "signatures": [
     {
       "name": "Nombre del miembro",
@@ -113,7 +121,7 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 #### Ver Carta
 - **Información completa** del equipo Niger 2.0
 - **Misión y objetivos** detallados
-- **Valores y normas** del equipo
+- **Valores** del equipo
 - **Lista de miembros** con emails
 
 #### Firmar Carta
@@ -124,12 +132,15 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 - **Validación** contra firmas duplicadas
 - **Confirmación visual** con animación de globos
 
+<<<<<<< HEAD
+#### 👨‍💼 Administrar Firmas (Panel del Responsable)
+=======
 #### Administrar Firmas (Panel del Responsable)
+>>>>>>> afab913f983c2ec02ad2f6428722c429bcd293a9
 - **Métricas en tiempo real** (total, firmados, pendientes, % progreso)
 - **Barra de progreso** visual
 - **Estado detallado** de cada miembro (firmado/pendiente)
 - **Registro completo** de firmas con fechas y horas
-- **Exportación a CSV** para auditoría externa
 
 ## Historias de Usuario Implementadas
 
@@ -154,7 +165,6 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 - Identificación clara de quién firmó y cuándo
 - Información guardada en charter.json (JSON)
 - Solo se aceptan firmas válidas con nombre y aceptación marcada
-- Exportación CSV para análisis externo
 
 ## Experiencia de Usuario
 
@@ -168,10 +178,19 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 1. **Miembro** accede a "Ver Carta" para leer toda la información
 2. **Miembro** va a "Firmar Carta" y completa el formulario
 3. **Responsable** revisa progreso en "Administrar Firmas"
-4. **Responsable** exporta datos cuando sea necesario
 
 ## Requisitos Cumplidos
 
+<<<<<<< HEAD
+✅ **Guardar carta del equipo** - `charter.json` con misión, objetivos y valores  
+✅ **Mostrar en web** - Interfaz web simple y funcional con Streamlit  
+✅ **Firma digital** - Sistema completo de firmas con validación  
+✅ **Almacenamiento de firmas** - Firmas guardadas directamente en `charter.json`  
+✅ **Interfaz para datos** - Web intuitiva para visualizar y gestionar  
+✅ **Panel de administración** - Vista especial para responsables del proyecto  
+✅ **Código simple** - Solo 150 líneas de código, fácil de mantener  
+✅ **GitHub** - Repositorio compartido con historial de commits  
+=======
  **Guardar carta del equipo** - `charter.json` con misión, objetivos, roles y normas  
  **Mostrar en web** - Interfaz web simple y funcional con Streamlit  
  **Firma digital** - Sistema completo de firmas con validación  
@@ -181,6 +200,7 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
  **Exportación de datos** - CSV para auditoría y análisis externo  
  **Código simple** - Solo 150 líneas de código, fácil de mantener  
  **GitHub** - Repositorio compartido con historial de commits  
+>>>>>>> afab913f983c2ec02ad2f6428722c429bcd293a9
 
 ##  Características Destacadas
 
@@ -200,6 +220,9 @@ Para dudas, sugerencias o reportar problemas:
 ---
 
 **Equipo Niger 2.0** - Proyecto desarrollado para el Reto 1  
+<<<<<<< HEAD
+*Comprometidos con la excelencia y el trabajo en equipo* 🚀
+=======
 *Comprometidos con la excelencia y el trabajo en equipo* 🚀
 
 ##  Características Técnicas
@@ -321,3 +344,4 @@ Para dudas, sugerencias o reportar problemas:
 
 **Equipo Niger 2.0** - Proyecto desarrollado para el Reto 1  
 *Comprometidos con la excelencia y el trabajo en equipo* 
+>>>>>>> afab913f983c2ec02ad2f6428722c429bcd293a9
