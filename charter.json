@@ -1,0 +1,26 @@
+{
+  "team_name": "Niger 2.0",
+  "members": [
+    {"name": "Luka Isasa", "email": "isasanovic4@gmail.com"},
+    {"name": "Aimar Duarte", "email": "aimardfcole@gmail.com"},
+    {"name": "Enrique Morales", "email": "emoralescebanc@gmail.com"},
+    {"name": "Aimar Redondo", "email": "aredondocebanc@gmail.com"},
+    {"name": "Oihan Cabada", "email": "oihan.cebanc1@gmail.com"}
+  ],
+  "mission": [
+    "Realizar el reto con el objetivo de superarlo y a poder ser, realizarlo para conseguir una mejora para el medio ambiente.",
+    "Acorde con la agenda 2030."
+  ],
+  "values": [
+    "Realizar el trabajo asignado.",
+    "Implementar en el reto lo aprendido en clase.",
+    "Realizar las entregas a tiempo."
+  ],
+  "strengths": [
+    "Llevamos un año usando git y algunos entornos de programación.",
+    "Tenemos conocimientos básicos de programación y no conocemos entre los miembros del equipo."
+  ],
+  "weaknesses": [
+    "No somos expertos en ningún campo y somos relativamente nuevos en la mayoría de aspectos de la programación."
+]
+}
