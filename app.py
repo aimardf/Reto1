@@ -231,7 +231,7 @@ elif selected_tab == "Ver formularios":
         
         st.write(f"**Total de competencias registradas: {len(competencias)}**")
         
-        for comp in competencias:
+        for idx, comp in enumerate(competencias):
             with st.expander(f"{comp['nombre']} - {comp['bloque']}"):
                 col1, col2 = st.columns(2)
                 with col1:
@@ -241,3 +241,10 @@ elif selected_tab == "Ver formularios":
                     st.write("**Qué necesito aprender:**")
                     st.write(comp['que_necesito'] if comp['que_necesito'] else "No especificado")
                 st.caption(f"Registrado: {comp['fecha']}")
+                # Botón para borrar este registro
+                if st.button("Borrar", key=f"borrar_{idx}"):
+                    competencias.pop(idx)
+                    save_competencias(competencias)
+                    st.success("Competencia eliminada")
+                    st.rerun()
+
