@@ -30,5 +30,13 @@
     "que_se": "Conozco los comandos básicos utilizados para crear un contenedor, encenderlo, apagarlo y eliminarlo.",
     "que_necesito": "Necesitaré aprender todo lo necesario para realizar el reto.",
     "fecha": "23/09/2025 12:34"
+  },
+  {
+    "nombre": "Enrique Morales",
+    "email": "emoralescebanc@gmail.com",
+    "bloque": "Base de Datos (Postgres)",
+    "que_se": "Básico nivel en bases de datos como \"MySQL\".",
+    "que_necesito": "El uso de la base de datos de Postgres ya que nunca he utilizado una.",
+    "fecha": "23/09/2025 12:36"
   }
 ]
