@@ -16,27 +16,27 @@
     "fecha": "23/09/2025 12:13"
   },
   {
-    "nombre": "Aimar Redondo",
-    "email": "aredondocebanc@gmail.com",
-    "bloque": "Trabajo en equipo",
-    "que_se": "Sé comunicarme y expresarme con el resto. Además, creo que se me da bien convencer de que mis ideas son buenas.",
-    "que_necesito": "Necesito poder valorar más las ideas de mis compañeros y no cerrarme solo en las mías. También debería saber liderar algo mejor cuando me toca.",
-    "fecha": "23/09/2025 12:18"
+    "nombre": "Oihan Cabada",
+    "email": "oihan.cebanc1@gmail.com",
+    "bloque": "Integraciones (Java / otros)",
+    "que_se": "Conozco varias ramas de la programación en Java, llegando a saber hasta POO",
+    "que_necesito": "Necesito aprender a ser más constante con lo que aprendo en Java e implementarlo en los trabajos para practicarlo y tener más facilidad con ello",
+    "fecha": "23/09/2025 12:30"
   },
   {
-    "nombre": "Aimar Redondo",
-    "email": "aredondocebanc@gmail.com",
+    "nombre": "Enrique Morales",
+    "email": "emoralescebanc@gmail.com",
+    "bloque": "Docker / Contenedores",
+    "que_se": "Conozco los comandos básicos utilizados para crear un contenedor, encenderlo, apagarlo y eliminarlo.",
+    "que_necesito": "Necesitaré aprender todo lo necesario para realizar el reto.",
+    "fecha": "23/09/2025 12:34"
+  },
+  {
+    "nombre": "Enrique Morales",
+    "email": "emoralescebanc@gmail.com",
     "bloque": "Base de Datos (Postgres)",
     "que_se": "Que es un entorno donde desarrollar bases de datos",
     "que_necesito": "La verdad no tengo ni idea, tengo que indagar y mejorar en este aspecto.",
     "fecha": "23/09/2025 12:28"
-  },
-  {
-    "nombre": "Aimar Redondo",
-    "email": "aredondocebanc@gmail.com",
-    "bloque": "ERP / Odoo",
-    "que_se": "Sé por encima para que sirve gracias a un par de clases del año pasado.",
-    "que_necesito": "Como manejarlo y como funciona",
-    "fecha": "23/09/2025 12:45"
   }
 ]
