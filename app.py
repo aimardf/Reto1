@@ -80,7 +80,7 @@ selected_tab = st.session_state.get("selected_tab", "Ver Carta")
 for i, tab in enumerate(tabs):
     if cols[i].button(tab):
         selected_tab = tab
-        st.session_state.selected_tab = tab  # Guardar en session_state
+        st.session_state.selected_tab = tab  # Guardar en session_state 
 
 # ================================
 # PÁGINAS
