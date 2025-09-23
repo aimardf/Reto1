@@ -78,5 +78,45 @@
     "que_se": "Que es un entorno donde puedo desarrollar y crear bases de datos.",
     "que_necesito": "No se utilizarlo ni manejarlo.",
     "fecha": "23/09/2025 12:55"
+  },
+  {
+    "nombre": "Luka Isasa",
+    "email": "isasanovic4@gmail.com",
+    "bloque": "Gestión del Proyecto",
+    "que_se": "Para la gestion de proyectos se usar github y tambien github desktop que nos permite decargar los cambios hechos por otra persona al instante.",
+    "que_necesito": "Necesito aprender igual alguna funcion de github que algunas cosas no entiendo y por otra parte aprender a usar un control de versiones eficaz",
+    "fecha": "23/09/2025 12:59"
+  },
+  {
+    "nombre": "Luka Isasa",
+    "email": "isasanovic4@gmail.com",
+    "bloque": "Docker / Contenedores",
+    "que_se": "De Docker me se los comandos basicos, run, exec, stop, tambien crear imagenes y contenedores y crear contenedores con imagenes. Se parar y ejecutar cuando quiera.",
+    "que_necesito": "Necesito entenderlo mejor, y tambien aprender de seguridad. Utilizar con soltura y rapido sin tener que estar mirando los comandos de vez en cuando porque se me olvidan.",
+    "fecha": "23/09/2025 13:00"
+  },
+  {
+    "nombre": "Luka Isasa",
+    "email": "isasanovic4@gmail.com",
+    "bloque": "Comunicación escrita",
+    "que_se": "Explicar las cosas de la mejor maner y escribir redacciones o emails sencillos.",
+    "que_necesito": "Necesito tener mas en cuenta los fallos ortograficos, porque al escribir rapido cometo bastantes fallos.",
+    "fecha": "23/09/2025 13:02"
+  },
+  {
+    "nombre": "Luka Isasa",
+    "email": "isasanovic4@gmail.com",
+    "bloque": "Competencia personal",
+    "que_se": "Soy responsable, y siempre me gusta terminar las cosas a tiempo y bien ejecutadas. Siempre intento ayudar al compañero en lo que no pueda.",
+    "que_necesito": "Algunas veces al querer hacerlo todo bien tardo mucho tiempo en tareas que se necitarian usar menos tiempo, esto es, tengo que mejorar en la manera de controlar el tiempo.",
+    "fecha": "23/09/2025 13:05"
+  },
+  {
+    "nombre": "Luka Isasa",
+    "email": "isasanovic4@gmail.com",
+    "bloque": "Base de Datos (Postgres)",
+    "que_se": "De lenguaje sql se lo basico, crear tablas, consultas, PK, FK....",
+    "que_necesito": "Pero hablando de Postgres no se nada, porque el año pasado usamos MySql. Por eso deberia aprender casi todo de Postgres. Crear, almacenar, consultas, vistas...",
+    "fecha": "23/09/2025 13:07"
   }
 ]
