@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 # Configuración de página
-st.set_page_config(page_title="Niger 2.0 - Team Charter")
+st.set_page_config(page_title="Niger 2.0 - Team Charter", layout="wide")
 
 def load_charter():
     try:
@@ -22,13 +22,29 @@ def save_charter(data):
         return False
 
 st.title("Team Charter - Niger 2.0")
+
 charter = load_charter()
 if not charter:
     st.stop()
 
-page = st.sidebar.selectbox("Menú", ["Ver Carta", "Firmar", "Administrar Firmas"])
+# ========================================
+# BARRA DE NAVEGACIÓN ARRIBA (tipo pestañas)
+# ========================================
+tabs = ["Ver Carta", "Firmar", "Administrar Firmas", "Añadir formulario", "Ver formularios"]
+cols = st.columns(len(tabs))
 
-if page == "Ver Carta":
+# Variable para controlar la pestaña seleccionada
+selected_tab = st.session_state.get("selected_tab", "Ver Carta")
+
+for i, tab in enumerate(tabs):
+    if cols[i].button(tab):
+        selected_tab = tab
+        st.session_state.selected_tab = tab  # Guardar en session_state
+
+# ================================
+# PÁGINAS
+# ================================
+if selected_tab == "Ver Carta":
     st.header("Carta del Equipo")
     st.subheader(f"{charter['team_name']}")
 
@@ -47,7 +63,7 @@ if page == "Ver Carta":
                 st.write(f"- {item}")
             st.markdown("---")
 
-elif page == "Firmar":
+elif selected_tab == "Firmar":
     st.header("Firmar Carta")
     signatures = charter.get('signatures', [])
     if signatures:
@@ -85,7 +101,7 @@ elif page == "Firmar":
                     else:
                         st.error("Error guardando firma")
 
-elif page == "Administrar Firmas":
+elif selected_tab == "Administrar Firmas":
     st.header("Panel del Responsable del Proyecto")
     members = charter.get('members', [])
     signatures = charter.get('signatures', [])
@@ -107,3 +123,16 @@ elif page == "Administrar Firmas":
             st.success(f"✅ {member['name']} ({member['email']}) - Firmó el {firmo['date']}")
         else:
             st.error(f"❌ {member['name']} ({member['email']}) - PENDIENTE")
+
+elif selected_tab == "Añadir formulario":
+    st.header("Añadir formulario")
+    with st.form("nuevo_formulario"):
+        titulo = st.text_input("Título del formulario")
+        descripcion = st.text_area("Descripción")
+        enviado = st.form_submit_button("Guardar")
+        if enviado:
+            st.success(f"Formulario '{titulo}' guardado correctamente (demo)")
+
+elif selected_tab == "Ver formularios":
+    st.header("Lista de formularios")
+    st.info("Aquí se mostrarán los formularios guardados (demo)")
