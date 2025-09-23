@@ -22,5 +22,13 @@
     "que_se": "Conozco varias ramas de la programación en Java, llegando a saber hasta POO",
     "que_necesito": "Necesito aprender a ser más constante con lo que aprendo en Java e implementarlo en los trabajos para practicarlo y tener más facilidad con ello",
     "fecha": "23/09/2025 12:30"
+  },
+  {
+    "nombre": "Enrique Morales",
+    "email": "emoralescebanc@gmail.com",
+    "bloque": "Docker / Contenedores",
+    "que_se": "Conozco los comandos básicos utilizados para crear un contenedor, encenderlo, apagarlo y eliminarlo.",
+    "que_necesito": "Necesitaré aprender todo lo necesario para realizar el reto.",
+    "fecha": "23/09/2025 12:34"
   }
 ]
