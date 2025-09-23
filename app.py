@@ -1,5 +1,7 @@
 import streamlit as st
 import json
+import csv
+import os
 from datetime import datetime
 
 # Configuración de página
@@ -20,6 +22,45 @@ def save_charter(data):
         return True
     except:
         return False
+
+def load_competencias():
+    try:
+        with open('competencias.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except:
+        return []
+
+def save_competencias(competencias):
+    try:
+        with open('competencias.json', 'w', encoding='utf-8') as f:
+            json.dump(competencias, f, indent=2, ensure_ascii=False)
+        return True
+    except:
+        return False
+
+def save_competencia(nombre, email, bloque, que_se, que_necesito):
+    competencias = load_competencias()
+    nueva_competencia = {
+        "nombre": nombre,
+        "email": email,
+        "bloque": bloque,
+        "que_se": que_se,
+        "que_necesito": que_necesito,
+        "fecha": datetime.now().strftime("%d/%m/%Y %H:%M")
+    }
+    competencias.append(nueva_competencia)
+    return save_competencias(competencias)
+
+def export_to_csv():
+    competencias = load_competencias()
+    if not competencias:
+        return None
+    
+    csv_content = "nombre,email,bloque,que_se,que_necesito,fecha\n"
+    for comp in competencias:
+        csv_content += f'"{comp["nombre"]}","{comp["email"]}","{comp["bloque"]}","{comp["que_se"]}","{comp["que_necesito"]}","{comp["fecha"]}"\n'
+    
+    return csv_content
 
 st.title("Team Charter - Niger 2.0")
 
@@ -125,14 +166,78 @@ elif selected_tab == "Administrar Firmas":
             st.error(f"❌ {member['name']} ({member['email']}) - PENDIENTE")
 
 elif selected_tab == "Añadir formulario":
-    st.header("Añadir formulario")
-    with st.form("nuevo_formulario"):
-        titulo = st.text_input("Título del formulario")
-        descripcion = st.text_area("Descripción")
-        enviado = st.form_submit_button("Guardar")
-        if enviado:
-            st.success(f"Formulario '{titulo}' guardado correctamente (demo)")
+    st.header("Formulario de Competencias")
+    
+    # Lista simple de competencias
+    competencias = [
+        "ERP / Odoo",
+        "Docker / Contenedores", 
+        "Base de Datos (Postgres)",
+        "Integraciones (Java / otros)",
+        "Gestión del Proyecto",
+        "Infraestructura / DevOps",
+        "Comunicación oral",
+        "Comunicación escrita",
+        "Trabajo en equipo",
+        "Competencia personal"
+    ]
+
+    with st.form("formulario_competencias"):
+        names = [m['name'] for m in charter['members']]
+        selected_member = st.selectbox("Tu nombre:", ["Selecciona..."] + names)
+        
+        bloque = st.selectbox("Selecciona una competencia:", ["Selecciona..."] + competencias)
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            que_se = st.text_area("Qué sé (fortalezas):", height=100)
+        with col2:
+            que_necesito = st.text_area("Qué necesito aprender:", height=100)
+        
+        submitted = st.form_submit_button("Guardar")
+        
+        if submitted:
+            if selected_member == "Selecciona...":
+                st.error("Selecciona tu nombre")
+            elif bloque == "Selecciona...":
+                st.error("Selecciona una competencia")
+            elif not que_se.strip() and not que_necesito.strip():
+                st.error("Completa al menos uno de los campos")
+            else:
+                email = next((m['email'] for m in charter['members'] if m['name'] == selected_member), "")
+                if save_competencia(selected_member, email, bloque, que_se.strip(), que_necesito.strip()):
+                    st.success("Competencia guardada correctamente")
+                    st.balloons()
+                else:
+                    st.error("Error al guardar")
 
 elif selected_tab == "Ver formularios":
-    st.header("Lista de formularios")
-    st.info("Aquí se mostrarán los formularios guardados (demo)")
+    st.header("Competencias del Equipo")
+    
+    competencias = load_competencias()
+    
+    if not competencias:
+        st.info("No hay competencias registradas aún")
+    else:
+        # Botón de descarga CSV
+        csv_data = export_to_csv()
+        if csv_data:
+            st.download_button(
+                label="Descargar CSV",
+                data=csv_data,
+                file_name=f"competencias_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
+                mime="text/csv"
+            )
+        
+        st.write(f"**Total de competencias registradas: {len(competencias)}**")
+        
+        for comp in competencias:
+            with st.expander(f"{comp['nombre']} - {comp['bloque']}"):
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.write("**Qué sé:**")
+                    st.write(comp['que_se'] if comp['que_se'] else "No especificado")
+                with col2:
+                    st.write("**Qué necesito aprender:**")
+                    st.write(comp['que_necesito'] if comp['que_necesito'] else "No especificado")
+                st.caption(f"Registrado: {comp['fecha']}")
