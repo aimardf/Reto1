@@ -46,5 +46,37 @@
     "que_se": "Es el apartado que mas fuerte tengo. A mi parecer mi nivel es bueno como para hacer todo lo necesario.",
     "que_necesito": "Alguna cosa puntual que no haya visto antes. En principio tengo bastante nivel.",
     "fecha": "23/09/2025 12:43"
+  },
+  {
+    "nombre": "Aimar Redondo",
+    "email": "aredondocebanc@gmail.com",
+    "bloque": "ERP / Odoo",
+    "que_se": "Sé para que se utiliza un poco por encima gracias a un par de clases del año pasado.",
+    "que_necesito": "No se manejarlo ni como utilizarlo en mis pryectos.",
+    "fecha": "23/09/2025 12:51"
+  },
+  {
+    "nombre": "Aimar Redondo",
+    "email": "aredondocebanc@gmail.com",
+    "bloque": "Docker / Contenedores",
+    "que_se": "Conozco los comandos básicos y que sirve para crear contenedores y demás cosas.",
+    "que_necesito": "Me falta mucho por aprender sobre máquinas virtuales y todo ese campo.",
+    "fecha": "23/09/2025 12:52"
+  },
+  {
+    "nombre": "Aimar Redondo",
+    "email": "aredondocebanc@gmail.com",
+    "bloque": "Integraciones (Java / otros)",
+    "que_se": "Puedo crear programas básicos desde 0 y que funcionen bien.",
+    "que_necesito": "Necesito conseguir mas soltura y fluidez, además de conocer más conceptos aparte de POO y los típicos.",
+    "fecha": "23/09/2025 12:54"
+  },
+  {
+    "nombre": "Aimar Redondo",
+    "email": "aredondocebanc@gmail.com",
+    "bloque": "Base de Datos (Postgres)",
+    "que_se": "Que es un entorno donde puedo desarrollar y crear bases de datos.",
+    "que_necesito": "No se utilizarlo ni manejarlo.",
+    "fecha": "23/09/2025 12:55"
   }
 ]
