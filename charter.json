@@ -28,19 +28,27 @@
     }
   ],
   "mission": [
-    "Realizar el reto con el objetivo de superarlo y a poder ser, realizarlo para conseguir una mejora para el medio ambiente.",
-    "Acorde con la agenda 2030."
+    "Desarrollar una solución digital que permita a los equipos gestionar su Team Charter de forma moderna, colaborativa y accesible, fomentando el compromiso y la transparencia.",
+    "Impulsar el aprendizaje y la aplicación práctica de los conocimientos adquiridos en clase mediante un proyecto real que combine programación, gestión de datos y trabajo en equipo.",
+    "Contribuir a los valores de la Agenda 2030, priorizando la sostenibilidad, la innovación y el impacto positivo en la forma en que los equipos colaboran y se organizan.",
+    "Promover el crecimiento personal y profesional de cada miembro del equipo a través de la responsabilidad compartida y la participación activa."
   ],
   "objectives": [
-    "Completar el proyecto dentro del plazo establecido",
-    "Aplicar los conocimientos adquiridos en clase",
-    "Trabajar en equipo de manera efectiva",
-    "Crear un sistema funcional y bien documentado"
+    "Completar el proyecto dentro del plazo establecido, cumpliendo con todos los requisitos técnicos y funcionales.",
+    "Aplicar de manera práctica los conocimientos adquiridos en programación, control de versiones, desarrollo web y documentación.",
+    "Fomentar un trabajo en equipo basado en la comunicación clara, la colaboración activa y la resolución conjunta de problemas.",
+    "Diseñar un sistema funcional, estable y fácil de usar, con una interfaz intuitiva y una base de datos organizada.",
+    "Asegurar que el proyecto sea escalable y mantenible, con un código limpio, documentado y adaptable a futuras mejoras.",
+    "Demostrar responsabilidad individual y colectiva, distribuyendo tareas de forma justa y cumpliendo con los compromisos asumidos."
   ],
   "values": [
-    "Realizar el trabajo asignado.",
-    "Implementar en el reto lo aprendido en clase.",
-    "Realizar las entregas a tiempo."
+    "Responsabilidad: cada miembro cumple con las tareas asignadas y asume las consecuencias de su trabajo.",
+    "Colaboración: trabajar juntos como un verdadero equipo, apoyándonos mutuamente y compartiendo conocimientos.",
+    "Compromiso: mantener la motivación y la dedicación necesarias para alcanzar los objetivos marcados.",
+    "Respeto: fomentar una comunicación clara, cordial y constructiva entre todos los integrantes del equipo.",
+    "Puntualidad: realizar las entregas en los tiempos acordados, respetando los plazos del proyecto.",
+    "Aprendizaje continuo: aprovechar el proyecto como una oportunidad para crecer en conocimientos técnicos y habilidades personales.",
+    "Calidad: buscar siempre la excelencia en el trabajo realizado, desde el código hasta la experiencia del usuario."
   ],
   "norms": [
     "Todos los miembros deben participar activamente",
