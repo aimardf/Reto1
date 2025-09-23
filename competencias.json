@@ -16,14 +16,6 @@
     "fecha": "23/09/2025 12:13"
   },
   {
-    "nombre": "Oihan Cabada",
-    "email": "oihan.cebanc1@gmail.com",
-    "bloque": "Integraciones (Java / otros)",
-    "que_se": "Conozco varias ramas de la programación en Java, llegando a saber hasta POO",
-    "que_necesito": "Necesito aprender a ser más constante con lo que aprendo en Java e implementarlo en los trabajos para practicarlo y tener más facilidad con ello",
-    "fecha": "23/09/2025 12:30"
-  },
-  {
     "nombre": "Enrique Morales",
     "email": "emoralescebanc@gmail.com",
     "bloque": "Docker / Contenedores",
@@ -118,5 +110,37 @@
     "que_se": "De lenguaje sql se lo basico, crear tablas, consultas, PK, FK....",
     "que_necesito": "Pero hablando de Postgres no se nada, porque el año pasado usamos MySql. Por eso deberia aprender casi todo de Postgres. Crear, almacenar, consultas, vistas...",
     "fecha": "23/09/2025 13:07"
+  },
+  {
+    "nombre": "Oihan Cabada",
+    "email": "oihan.cebanc1@gmail.com",
+    "bloque": "ERP / Odoo",
+    "que_se": "Aprendí ciertas cosas el año pasado, a como crear una página y como crear las ventas y una tienda virtual añadiendo cosas a la página.",
+    "que_necesito": "La verdad que todo, me gustaría refrescar todo de nuevo, ya que tengo ciertas cosas en mente de las que me acuerdo, pero no son cien por cien fiables, ya que hace mucho que no trabajo con ello.",
+    "fecha": "23/09/2025 13:11"
+  },
+  {
+    "nombre": "Oihan Cabada",
+    "email": "oihan.cebanc1@gmail.com",
+    "bloque": "Integraciones (Java / otros)",
+    "que_se": "Conozco ciertas cosas de programación, concretamente hasta la rama de POO.",
+    "que_necesito": "Necesito aprender a ser más constante con el trabajo en java, ya que me ayudará para fortalecer los conocimientos.",
+    "fecha": "23/09/2025 13:13"
+  },
+  {
+    "nombre": "Oihan Cabada",
+    "email": "oihan.cebanc1@gmail.com",
+    "bloque": "Base de Datos (Postgres)",
+    "que_se": "Crear una base de datos con sus tablas y sus respectivas variables.",
+    "que_necesito": "Indagar más dentro de los postgres, ya que es una parte que no he tocado mucho y es más específica dentro de la base de datos.",
+    "fecha": "23/09/2025 13:14"
+  },
+  {
+    "nombre": "Oihan Cabada",
+    "email": "oihan.cebanc1@gmail.com",
+    "bloque": "Comunicación oral",
+    "que_se": "Sé presentar y hablar en público sin ponerme nervioso en ningún momento, manteniendo la calma en todo momento e intentando explicar lo mejor posible todos los detalles a presentar.",
+    "que_necesito": "Creo que a veces me excedo explicando y me precipito a la hora de hablar, lo que conlleva que hable demasiado rápido a veces y no se me entienda bien.",
+    "fecha": "23/09/2025 13:20"
   }
 ]
