@@ -3,6 +3,7 @@ Team Charter Niger 2.0 - Versión Simple
 Sistema web para firmar la carta del equipo
 """
 
+
 import streamlit as st
 import json
 from datetime import datetime
