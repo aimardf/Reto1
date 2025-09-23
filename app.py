@@ -1,12 +1,13 @@
 import streamlit as st
 import json
-import csv
-import os
 from datetime import datetime
 
 # Configuración de página
 st.set_page_config(page_title="Niger 2.0 - Team Charter", layout="wide")
 
+# -----------------------
+# Funciones de gestión
+# -----------------------
 def load_charter():
     try:
         with open('charter.json', 'r', encoding='utf-8') as f:
@@ -59,33 +60,26 @@ def export_to_csv():
     csv_content = "nombre,email,bloque,que_se,que_necesito,fecha\n"
     for comp in competencias:
         csv_content += f'"{comp["nombre"]}","{comp["email"]}","{comp["bloque"]}","{comp["que_se"]}","{comp["que_necesito"]}","{comp["fecha"]}"\n'
-    
     return csv_content
 
+# -----------------------
+# Cargar datos
+# -----------------------
 st.title("Team Charter - Niger 2.0")
-
 charter = load_charter()
 if not charter:
     st.stop()
 
-# ========================================
-# BARRA DE NAVEGACIÓN ARRIBA (tipo pestañas)
-# ========================================
+# -----------------------
+# Barra de pestañas
+# -----------------------
 tabs = ["Ver Carta", "Firmar", "Administrar Firmas", "Añadir formulario", "Ver formularios"]
-cols = st.columns(len(tabs))
+tab_objs = st.tabs(tabs)
 
-# Variable para controlar la pestaña seleccionada
-selected_tab = st.session_state.get("selected_tab", "Ver Carta")
-
-for i, tab in enumerate(tabs):
-    if cols[i].button(tab):
-        selected_tab = tab
-        st.session_state.selected_tab = tab  # Guardar en session_state 
-
-# ================================
-# PÁGINAS
-# ================================
-if selected_tab == "Ver Carta":
+# -----------------------
+# Pestaña 1: Ver Carta
+# -----------------------
+with tab_objs[0]:
     st.header("Carta del Equipo")
     st.subheader(f"{charter['team_name']}")
 
@@ -104,7 +98,10 @@ if selected_tab == "Ver Carta":
                 st.write(f"- {item}")
             st.markdown("---")
 
-elif selected_tab == "Firmar":
+# -----------------------
+# Pestaña 2: Firmar
+# -----------------------
+with tab_objs[1]:
     st.header("Firmar Carta")
     signatures = charter.get('signatures', [])
     if signatures:
@@ -138,11 +135,14 @@ elif selected_tab == "Firmar":
                     if save_charter(charter):
                         st.success(f"¡Gracias {selected}! Firma registrada")
                         st.balloons()
-                        st.experimental_rerun()
+                        st.rerun()
                     else:
                         st.error("Error guardando firma")
 
-elif selected_tab == "Administrar Firmas":
+# -----------------------
+# Pestaña 3: Administrar Firmas
+# -----------------------
+with tab_objs[2]:
     st.header("Panel del Responsable del Proyecto")
     members = charter.get('members', [])
     signatures = charter.get('signatures', [])
@@ -165,11 +165,12 @@ elif selected_tab == "Administrar Firmas":
         else:
             st.error(f"❌ {member['name']} ({member['email']}) - PENDIENTE")
 
-elif selected_tab == "Añadir formulario":
+# -----------------------
+# Pestaña 4: Añadir formulario
+# -----------------------
+with tab_objs[3]:
     st.header("Formulario de Competencias")
-    
-    # Lista simple de competencias
-    competencias = [
+    competencias_list = [
         "ERP / Odoo",
         "Docker / Contenedores", 
         "Base de Datos (Postgres)",
@@ -185,9 +186,7 @@ elif selected_tab == "Añadir formulario":
     with st.form("formulario_competencias"):
         names = [m['name'] for m in charter['members']]
         selected_member = st.selectbox("Tu nombre:", ["Selecciona..."] + names)
-        
-        bloque = st.selectbox("Selecciona una competencia:", ["Selecciona..."] + competencias)
-        
+        bloque = st.selectbox("Selecciona una competencia:", ["Selecciona..."] + competencias_list)
         col1, col2 = st.columns(2)
         with col1:
             que_se = st.text_area("Qué sé (fortalezas):", height=100)
@@ -211,15 +210,16 @@ elif selected_tab == "Añadir formulario":
                 else:
                     st.error("Error al guardar")
 
-elif selected_tab == "Ver formularios":
+# -----------------------
+# Pestaña 5: Ver formularios
+# -----------------------
+with tab_objs[4]:
     st.header("Competencias del Equipo")
-    
     competencias = load_competencias()
     
     if not competencias:
         st.info("No hay competencias registradas aún")
     else:
-        # Botón de descarga CSV
         csv_data = export_to_csv()
         if csv_data:
             st.download_button(
@@ -241,10 +241,8 @@ elif selected_tab == "Ver formularios":
                     st.write("**Qué necesito aprender:**")
                     st.write(comp['que_necesito'] if comp['que_necesito'] else "No especificado")
                 st.caption(f"Registrado: {comp['fecha']}")
-                # Botón para borrar este registro
                 if st.button("Borrar", key=f"borrar_{idx}"):
                     competencias.pop(idx)
                     save_competencias(competencias)
                     st.success("Competencia eliminada")
                     st.rerun()
-
