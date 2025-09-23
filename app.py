@@ -82,6 +82,8 @@ tab_objs = st.tabs(tabs)
 with tab_objs[0]:
     st.header("Carta del Equipo")
     st.subheader(f"{charter['team_name']}")
+    
+    st.image("logoNiger.png", width=200)
 
     sections = ["Miembros", "Misión", "Objetivos", "Valores"]
     data = [
