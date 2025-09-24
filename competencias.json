@@ -8,6 +8,38 @@
     "fecha": "23/09/2025 11:43"
   },
   {
+    "nombre": "Aimar Duarte",
+    "email": "aimardfcole@gmail.com",
+    "bloque": "ERP / Odoo",
+    "que_se": "Conceptos básicos vistos en clase, instalación y configuración inicial",
+    "que_necesito": "Profundizar en módulos específicos, desarrollo personalizado y integración con otros sistemas",
+    "fecha": "24/09/2025 09:15"
+  },
+  {
+    "nombre": "Aimar Duarte",
+    "email": "aimardfcole@gmail.com",
+    "bloque": "Base de Datos (Postgres)",
+    "que_se": "SQL básico, creación de tablas y consultas simples aprendidas en clase",
+    "que_necesito": "Aprender Postgres específicamente, performance tuning, procedimientos almacenados y administración avanzada",
+    "fecha": "24/09/2025 09:16"
+  },
+  {
+    "nombre": "Aimar Duarte",
+    "email": "aimardfcole@gmail.com",
+    "bloque": "Integraciones (Java / otros)",
+    "que_se": "Programación básica en Java, conceptos de POO y desarrollo de aplicaciones simples",
+    "que_necesito": "APIs REST, microservicios, frameworks como Spring, y patrones de diseño avanzados",
+    "fecha": "24/09/2025 09:17"
+  },
+  {
+    "nombre": "Aimar Duarte",
+    "email": "aimardfcole@gmail.com",
+    "bloque": "Gestión del Proyecto",
+    "que_se": "Git básico para control de versiones y metodologías ágiles a nivel teórico",
+    "que_necesito": "CI/CD, gestión avanzada de ramas en Git, documentación técnica y herramientas de project management",
+    "fecha": "24/09/2025 09:18"
+  },
+  {
     "nombre": "Enrique Morales",
     "email": "emoralescebanc@gmail.com",
     "bloque": "ERP / Odoo",
